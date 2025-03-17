@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import Persony from "../assets/persony.png";
+import Botao from "./components/Botao";
 
 const Sobre: React.FC = () => {
     return (
@@ -9,6 +10,9 @@ const Sobre: React.FC = () => {
                     <TextContainer>
                         <Title>Tenha a melhor <br />internet do seu bairro</Title>
                         <Descricao>Com preços que cabe no seu bolso e com uma velocidade incrível!</Descricao>
+                        <BotaoContainer>
+                            <Botao>Saiba mais</Botao>
+                        </BotaoContainer>
                     </TextContainer>
                     <ImageWrapper>
                         <Imagem src={Persony} alt="Personagem" />
@@ -36,6 +40,21 @@ const ContentWrapper = styled.div`
     
     @media (max-width: 768px) {
         flex-direction: column-reverse;
+    }
+`;
+
+const BotaoContainer = styled.div`
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    margin-top: 2rem;
+    
+    @media (max-width: 768px) {
+        text-align: center;
+        margin-top: 2rem;
+        width: 100%;
     }
 `;
 

@@ -32,6 +32,11 @@ const Precos: React.FC = () => {
                     descricao="O plano mais rápido para quem deseja fazer tudo ao mesmo tempo – jogos online, streaming 4K, e muito mais."
                 />
             </Container>
+            <TituloDescricao>Precisando de um plano específico?</TituloDescricao>
+            <Descricao>Nossa equipe pode fazer um plano personalizado para você de acordo com suas necessidades, do jeitinho que você e sua família precisa!
+                <br />
+                <br />
+                Contate REDE LANDAN para saber mais sobre sua futura internet.</Descricao>
         </Section>
     );
 };
@@ -60,7 +65,7 @@ const Section = styled.section`
 const Title = styled.h1`
     margin: 0;
     padding-bottom: 5vh;
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-family: 'Istok Web', sans-serif;
     font-weight: 700;
     line-height: 1.0;
@@ -69,7 +74,37 @@ const Title = styled.h1`
     margin-bottom: 5vh;
 
     @media (max-width: 768px) {
-        font-size: 2rem;
+        font-size: 1.5rem;
+    }
+`;
+
+const TituloDescricao = styled.h2`
+    margin: 0;
+    font-size: 1.5rem;
+    font-family: 'Istok Web', sans-serif;
+    font-weight: 700;
+    line-height: 1.0;
+    text-align: center;
+    color: ${props => props.theme.colors.backgroundLight};
+    margin-bottom: 1rem;
+
+    @media (max-width: 768px) {
+        font-size: 1.2rem;
+    }
+`;
+
+const Descricao = styled.p`
+    margin: 0;
+    font-size: 1rem;
+    font-family: 'Roboto';
+    font-weight: 200;
+    line-height: 1.0;
+    text-align: center;
+    color: ${props => props.theme.colors.backgroundLight};
+    margin-bottom: 5vh;
+
+    @media (max-width: 768px) {
+        font-size: 0.8rem;
     }
 `;
 
@@ -78,6 +113,7 @@ const Container = styled.div`
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
+    margin-bottom: 5vh;
 `;
 
 export default Precos;
