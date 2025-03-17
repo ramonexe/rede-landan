@@ -14,7 +14,7 @@ const Hero: React.FC = () => {
                         REDE<br />
                         LANDAN
                     </Titulo>
-                    <Descricao>Internet rápida para sua casa.</Descricao>
+                    <Descricao>INTERNET DE FIBRA ÓTICA.</Descricao>
                 </Div>
             </div>
         </Section>

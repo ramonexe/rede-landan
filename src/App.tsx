@@ -7,6 +7,8 @@ import Contato from './sections/Contato';
 import { GlobalStyles } from './styles/globals';
 import Cabecalho from './sections/components/Cabecalho';
 import Rodape from './sections/Rodape';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 function App() {
 

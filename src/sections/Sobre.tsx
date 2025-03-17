@@ -3,6 +3,13 @@ import Persony from "../assets/persony.png";
 import Botao from "./components/Botao";
 
 const Sobre: React.FC = () => {
+    const handleMandarMensagem = () => {
+        const whatsappNumero = "5511942957971";
+        const textoMensagem = encodeURIComponent("Olá, gostaria de mais informações sobre os serviços da Rede Landan.");
+        const whatsappLink = `https://wa.me/${whatsappNumero}?text=${textoMensagem}`;
+        window.open(whatsappLink, "_blank");
+    };
+
     return (
         <Section>
             <Container>
@@ -11,7 +18,7 @@ const Sobre: React.FC = () => {
                         <Title>Tenha a melhor <br />internet do seu bairro</Title>
                         <Descricao>Com preços que cabe no seu bolso e com uma velocidade incrível!</Descricao>
                         <BotaoContainer>
-                            <Botao>Saiba mais</Botao>
+                            <Botao onClick={handleMandarMensagem}>Saiba mais</Botao>
                         </BotaoContainer>
                     </TextContainer>
                     <ImageWrapper>
@@ -50,7 +57,7 @@ const BotaoContainer = styled.div`
     flex-direction: column;
     width: 20%;
     margin-top: 2rem;
-    
+
     @media (max-width: 768px) {
         text-align: center;
         margin-top: 2rem;
