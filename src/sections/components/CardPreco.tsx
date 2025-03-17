@@ -9,6 +9,7 @@ interface CardPrecoProps {
     uploadMbps: number;
     downloadMbps: number;
     descricao: string;
+    recomendado?: boolean;
 }
 
 const CardContainer = styled.div`
@@ -20,6 +21,11 @@ const CardContainer = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    position: relative;
+
+    @media (max-width: 425px) {
+        max-width: 250px;
+    }
 `;
 
 const PlanoHeader = styled.div`
@@ -63,9 +69,23 @@ const Tipo = styled.span`
     font-size: 12px;
 `;
 
-const CardPreco: React.FC<CardPrecoProps> = ({ nomePlano, preco, tipoPlano, uploadMbps, downloadMbps, descricao }) => {
+const FaixaRecomendado = styled.div`
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: ${props => props.theme.colors.primary};
+    color: #fff;
+    padding: 5px 10px;
+    font-size: 12px;
+    font-weight: bold;
+    border-top-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+`;
+
+const CardPreco: React.FC<CardPrecoProps> = ({ nomePlano, preco, tipoPlano, uploadMbps, downloadMbps, descricao, recomendado }) => {
     return (
         <CardContainer>
+            {recomendado && <FaixaRecomendado>Recomendado</FaixaRecomendado>}
             <PlanoHeader>
                 <NomePlano>{nomePlano}</NomePlano>
                 <Preco>{preco}<Tipo>{tipoPlano}</Tipo></Preco>

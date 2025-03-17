@@ -21,6 +21,7 @@ const Precos: React.FC = () => {
                     uploadMbps={20}
                     downloadMbps={100}
                     descricao="Uma conexão rápida e estável para quem exige mais da internet no dia a dia."
+                    recomendado={true}
                 />
                 <CardPreco
                     nomePlano="Avançado"
@@ -65,6 +66,10 @@ const Title = styled.h1`
     text-align: center;
     color: ${props => props.theme.colors.primary};
     margin-bottom: 5vh;
+
+    @media (max-width: 768px) {
+        font-size: 2rem;
+    }
 `;
 
 const Container = styled.div`
