@@ -17,14 +17,21 @@ const CardContainer = styled.div`
     color: ${props => props.theme.colors.text};
     border-radius: 8px;
     padding: 16px;
-    max-width: 300px;
+    max-width: 400px;
+    min-height: 600px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     position: relative;
 
+    @media (max-width: 768px) {
+        max-width: 300px;
+        min-height: 500px;
+    }
+
     @media (max-width: 425px) {
         max-width: 250px;
+        min-height: 450px;
     }
 `;
 

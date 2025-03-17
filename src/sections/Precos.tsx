@@ -46,8 +46,9 @@ const Section = styled.section`
     opacity: 1;
     background: radial-gradient(circle, transparent 20%, #0D0D0D 20%, #0D0D0D 80%, transparent 80%, transparent), radial-gradient(circle, transparent 20%, #0D0D0D 20%, #0D0D0D 80%, transparent 80%, transparent) 25px 25px, linear-gradient(#1c1c1a 2px, transparent 2px) 0 -1px, linear-gradient(90deg, #1c1c1a 2px, #0D0D0D 2px) -1px 0;
     background-size: 50px 50px, 50px 50px, 25px 25px, 25px 25px;
+    padding: 5vh 0;
     width: 100vw;
-    height: 100vh;
+    height: 100%;
     
     @media (max-width: 768px) {
         height: auto;

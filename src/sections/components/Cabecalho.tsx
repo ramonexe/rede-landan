@@ -19,6 +19,7 @@ const Header = styled.header`
     display: flex;
     justify-content: flex-end;
     background: transparent;
+    z-index: 1000;
 `;
 
 export default Cabecalho;
