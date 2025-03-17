@@ -1,13 +1,13 @@
 import styled, { keyframes } from "styled-components";
 import Background from "../assets/wpp.webp";
-import Yellowb from "../assets/yellowb.png";
+import logo from "../assets/logo.png";
 
 const Hero: React.FC = () => {
     return (
         <Section>
             <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', gap: '5vw', paddingBottom: '10vh' }}>
                 <div>
-                    <Logo src={Yellowb} alt="Logo" />
+                    <Logo src={logo} alt="Logo" />
                 </div>
                 <Div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
                     <Titulo>

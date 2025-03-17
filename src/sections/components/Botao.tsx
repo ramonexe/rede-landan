@@ -4,7 +4,7 @@ import styled from 'styled-components';
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {}
 
 const StyledButton = styled.button<ButtonProps>`
-    background-color: #F2B705;
+    background-color: ${(props) => props.theme.colors.primary};
     color: black;
     font-family: 'Roboto', sans-serif;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -17,7 +17,7 @@ const StyledButton = styled.button<ButtonProps>`
     transition: background-color 0.3s;
 
     &:hover {
-        background-color: #D98E04;
+        background-color: ${(props) => props.theme.colors.primaryHover};
     }
 `;
 
