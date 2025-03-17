@@ -6,6 +6,7 @@ import Precos from './sections/Precos';
 import Contato from './sections/Contato';
 import { GlobalStyles } from './styles/globals';
 import Cabecalho from './sections/components/Cabecalho';
+import Rodape from './sections/Rodape';
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
         <Sobre />
         <Precos />
         <Contato />
+        <Rodape />
       </ThemeProvider>
     </>
   )
