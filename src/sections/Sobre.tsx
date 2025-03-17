@@ -74,6 +74,7 @@ const Imagem = styled.img`
 
 const Title = styled.h1`
     margin: 0;
+    padding-top: 5rem;
     font-family: "Istok Web";
     font-size: 4.5rem;
     font-style: normal;
@@ -131,7 +132,6 @@ const Section = styled.section`
     padding-top: 5vh;
     width: 100vw;
     height: 100vh;
-    user-select: none;
     
     @media (max-width: 768px) {
         height: auto;
