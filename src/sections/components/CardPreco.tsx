@@ -6,11 +6,37 @@ interface CardPrecoProps {
     nomePlano: string;
     preco: string;
     tipoPlano: string;
-    uploadMbps: number;
     downloadMbps: number;
     descricao: string;
     recomendado?: boolean;
+    popular?: boolean;
+    onClickPlano: (nomePlano: string, preco: string, downloadMbps: number) => void;
 }
+
+const CardPreco: React.FC<CardPrecoProps> = ({ nomePlano, preco, tipoPlano, downloadMbps, descricao, recomendado, popular, onClickPlano }) => {
+    const handleMandarMensagem = () => {
+        onClickPlano(nomePlano, preco, downloadMbps);
+    };
+
+    return (
+        <CardContainer>
+            {recomendado && <FaixaRecomendado>Recomendado</FaixaRecomendado>}
+            {popular && <FaixaPopular>Popular</FaixaPopular>}
+            <CardWrapper>
+            <PlanoHeader>
+                <NomePlano>{nomePlano}</NomePlano>
+                <Preco><Moeda>R$</Moeda>{preco}<Tipo>{tipoPlano}</Tipo></Preco>
+            </PlanoHeader>
+            <LinhaDivisoria />
+            <InfoPlano>
+                <p>{downloadMbps}Mbps<Tipo>/download</Tipo></p>
+            </InfoPlano>
+            <Descricao>{descricao}</Descricao>
+            <BotaoFixo onClick={handleMandarMensagem}>Entrar em contato</BotaoFixo>
+            </CardWrapper>
+        </CardContainer>
+    );
+};
 
 const CardContainer = styled.div`
     background-color: ${props => props.theme.colors.backgroundLight};
@@ -18,20 +44,21 @@ const CardContainer = styled.div`
     border-radius: 8px;
     padding: 16px;
     max-width: 400px;
-    min-height: 600px;
+    height: 600px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     position: relative;
-
+    margin: 5px;
+    
     @media (max-width: 768px) {
         max-width: 300px;
-        min-height: 500px;
+        height: 500px;
     }
 
     @media (max-width: 425px) {
         max-width: 250px;
-        min-height: 450px;
+        height: 450px;
     }
 `;
 
@@ -96,7 +123,7 @@ const FaixaRecomendado = styled.div`
     top: 0;
     right: 0;
     background-color: ${props => props.theme.colors.primary};
-    color: #fff;
+    color: ${props => props.theme.colors.text};
     padding: 5px 10px;
     font-size: 12px;
     font-weight: bold;
@@ -104,25 +131,17 @@ const FaixaRecomendado = styled.div`
     border-bottom-left-radius: 8px;
 `;
 
-const CardPreco: React.FC<CardPrecoProps> = ({ nomePlano, preco, tipoPlano, uploadMbps, downloadMbps, descricao, recomendado }) => {
-    return (
-        <CardContainer>
-            {recomendado && <FaixaRecomendado>Recomendado</FaixaRecomendado>}
-            <CardWrapper>
-            <PlanoHeader>
-                <NomePlano>{nomePlano}</NomePlano>
-                <Preco><Moeda>R$</Moeda>{preco}<Tipo>{tipoPlano}</Tipo></Preco>
-            </PlanoHeader>
-            <LinhaDivisoria />
-            <InfoPlano>
-                <p>{uploadMbps}Mbps<Tipo>/upload</Tipo></p>
-                <p>{downloadMbps}Mbps<Tipo>/download</Tipo></p>
-            </InfoPlano>
-            <Descricao>{descricao}</Descricao>
-            <BotaoFixo>Entrar em contato</BotaoFixo>
-            </CardWrapper>
-        </CardContainer>
-    );
-};
+const FaixaPopular = styled.div`
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #8400ff;
+    color: #ffffff;
+    padding: 5px 10px;
+    font-size: 12px;
+    font-weight: bold;
+    border-top-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+`;
 
 export default CardPreco;
