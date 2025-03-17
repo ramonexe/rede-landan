@@ -38,6 +38,10 @@ const Logo = styled.img`
     height: auto;
     animation: ${flutuar} 3s ease-in-out infinite;
     animation-fill-mode: forwards;
+
+    @media (max-width: 768px) {
+        width: 100px;
+    }
 `;
 
 const slideDireita = keyframes`
@@ -64,6 +68,10 @@ const Titulo = styled.h1`
     font-weight: 700;
     line-height: 1.0;
     text-align: left;
+
+    @media (max-width: 768px) {
+        font-size: 2.5rem;
+    }
 `;
 
 const Descricao = styled.p`
@@ -72,6 +80,11 @@ const Descricao = styled.p`
     font-size: 1rem;
     font-weight: 300;
     text-align: left;
+
+    @media (max-width: 768px) {
+        font-size: 0.8rem;
+        margin-right: 0;
+    }
 `;
 
 const Section = styled.section`

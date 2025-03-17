@@ -18,7 +18,6 @@ const Header = styled.header`
     width: 100%;
     display: flex;
     justify-content: flex-end;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     background: transparent;
 `;
 
