@@ -8,7 +8,7 @@ const Precos: React.FC = () => {
             <Container>
                 <CardPreco
                     nomePlano="Básico"
-                    preco="R$ 49,90"
+                    preco="49,90"
                     tipoPlano="/mês"
                     uploadMbps={30}
                     downloadMbps={50}
@@ -16,19 +16,19 @@ const Precos: React.FC = () => {
                 />
                 <CardPreco
                     nomePlano="Popular"
-                    preco="R$ 79,90"
+                    preco="99,90"
                     tipoPlano="/mês"
-                    uploadMbps={20}
+                    uploadMbps={60}
                     downloadMbps={100}
                     descricao="Uma conexão rápida e estável para quem exige mais da internet no dia a dia."
                     recomendado={true}
                 />
                 <CardPreco
                     nomePlano="Avançado"
-                    preco="R$ 99,90"
+                    preco="159,90"
                     tipoPlano="/mês"
-                    uploadMbps={50}
-                    downloadMbps={200}
+                    uploadMbps={100}
+                    downloadMbps={170}
                     descricao="O plano mais rápido para quem deseja fazer tudo ao mesmo tempo – jogos online, streaming 4K, e muito mais."
                 />
             </Container>

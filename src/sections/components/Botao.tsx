@@ -7,6 +7,7 @@ const StyledButton = styled.button<ButtonProps>`
     background-color: #F2B705;
     color: black;
     font-family: 'Roboto', sans-serif;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     font-weight: 700;
     border: none;
     padding: 10px 20px;

@@ -76,6 +76,21 @@ const Tipo = styled.span`
     font-size: 12px;
 `;
 
+const Moeda = styled.span`
+    font-size: 24px;
+`;
+
+const CardWrapper = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+    padding: 24px;
+    box-sizing: border-box;
+    position: relative;
+`;
+
 const FaixaRecomendado = styled.div`
     position: absolute;
     top: 0;
@@ -93,9 +108,10 @@ const CardPreco: React.FC<CardPrecoProps> = ({ nomePlano, preco, tipoPlano, uplo
     return (
         <CardContainer>
             {recomendado && <FaixaRecomendado>Recomendado</FaixaRecomendado>}
+            <CardWrapper>
             <PlanoHeader>
                 <NomePlano>{nomePlano}</NomePlano>
-                <Preco>{preco}<Tipo>{tipoPlano}</Tipo></Preco>
+                <Preco><Moeda>R$</Moeda>{preco}<Tipo>{tipoPlano}</Tipo></Preco>
             </PlanoHeader>
             <LinhaDivisoria />
             <InfoPlano>
@@ -104,6 +120,7 @@ const CardPreco: React.FC<CardPrecoProps> = ({ nomePlano, preco, tipoPlano, uplo
             </InfoPlano>
             <Descricao>{descricao}</Descricao>
             <BotaoFixo>Entrar em contato</BotaoFixo>
+            </CardWrapper>
         </CardContainer>
     );
 };
