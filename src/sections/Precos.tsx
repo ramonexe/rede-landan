@@ -8,30 +8,28 @@ const Precos: React.FC = () => {
             <Container>
                 <CardPreco
                     nomePlano="Básico"
-                    preco="49,90"
+                    preco="79,90"
                     tipoPlano="/mês"
-                    uploadMbps={30}
-                    downloadMbps={50}
+                    downloadMbps={70}
                     descricao="O plano ideal para quem precisa de uma conexão básica, com estabilidade para tarefas cotidianas."
                 />
                 <CardPreco
                     nomePlano="Popular"
-                    preco="99,90"
+                    preco="109,90"
                     tipoPlano="/mês"
-                    uploadMbps={60}
-                    downloadMbps={100}
+                    downloadMbps={150}
                     descricao="Uma conexão rápida e estável para quem exige mais da internet no dia a dia."
                     recomendado={true}
                 />
                 <CardPreco
                     nomePlano="Avançado"
-                    preco="159,90"
+                    preco="139,90"
                     tipoPlano="/mês"
-                    uploadMbps={100}
-                    downloadMbps={170}
+                    downloadMbps={400}
                     descricao="O plano mais rápido para quem deseja fazer tudo ao mesmo tempo – jogos online, streaming 4K, e muito mais."
                 />
             </Container>
+            <Obs>Taxa de instalação no valor único de cem reais em forma comodato.</Obs>
             <TituloDescricao>Precisando de um plano específico?</TituloDescricao>
             <Descricao>Nossa equipe pode fazer um plano personalizado para você de acordo com suas necessidades, do jeitinho que você e sua família precisa!
                 <br />
@@ -59,6 +57,21 @@ const Section = styled.section`
         height: auto;
         min-height: 100vh;
         padding: 5vh 0;
+    }
+`;
+
+const Obs = styled.p`
+    margin: 0;
+    font-size: 1rem;
+    font-family: 'Roboto';
+    font-weight: 200;
+    line-height: 1.0;
+    text-align: center;
+    color: ${props => props.theme.colors.backgroundLight};
+    margin-bottom: 5vh;
+
+    @media (max-width: 768px) {
+        font-size: 0.8rem;
     }
 `;
 

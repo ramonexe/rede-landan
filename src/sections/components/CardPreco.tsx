@@ -6,7 +6,7 @@ interface CardPrecoProps {
     nomePlano: string;
     preco: string;
     tipoPlano: string;
-    uploadMbps: number;
+    uploadMbps?: number;
     downloadMbps: number;
     descricao: string;
     recomendado?: boolean;
@@ -104,7 +104,7 @@ const FaixaRecomendado = styled.div`
     border-bottom-left-radius: 8px;
 `;
 
-const CardPreco: React.FC<CardPrecoProps> = ({ nomePlano, preco, tipoPlano, uploadMbps, downloadMbps, descricao, recomendado }) => {
+const CardPreco: React.FC<CardPrecoProps> = ({ nomePlano, preco, tipoPlano, downloadMbps, descricao, recomendado }) => {
     return (
         <CardContainer>
             {recomendado && <FaixaRecomendado>Recomendado</FaixaRecomendado>}
@@ -115,7 +115,7 @@ const CardPreco: React.FC<CardPrecoProps> = ({ nomePlano, preco, tipoPlano, uplo
             </PlanoHeader>
             <LinhaDivisoria />
             <InfoPlano>
-                <p>{uploadMbps}Mbps<Tipo>/upload</Tipo></p>
+                {/*<p>{uploadMbps}Mbps<Tipo>/upload</Tipo></p>*/}
                 <p>{downloadMbps}Mbps<Tipo>/download</Tipo></p>
             </InfoPlano>
             <Descricao>{descricao}</Descricao>

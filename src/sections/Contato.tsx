@@ -6,7 +6,7 @@ const Contato: React.FC = () => {
     const [mensagem, setMensagem] = useState("");
 
     const handleMandarMensagem = () => {
-        const whatsappNumero = "5511953432576";
+        const whatsappNumero = "5511942957971";
         const textoMensagem = encodeURIComponent(mensagem);
         const whatsappLink = `https://wa.me/${whatsappNumero}?text=${textoMensagem}`;
         window.open(whatsappLink, "_blank");
