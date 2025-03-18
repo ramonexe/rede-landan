@@ -12,6 +12,11 @@ const FooterContainer = styled.footer`
 
 const FooterText = styled.p`
     margin: 0;
+
+    @media (max-width: 768px) {
+        margin-right: 2.6rem;
+        font-size: 0.8rem;
+    }
 `;
 
 const Rodape: React.FC = () => {

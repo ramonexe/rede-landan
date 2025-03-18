@@ -15,7 +15,7 @@ const Sobre: React.FC = () => {
             <Container>
                 <ContentWrapper>
                     <TextContainer>
-                        <Title>Tenha a melhor <br />internet do seu bairro</Title>
+                        <Title>Tenha a melhor <br />internet da cidade</Title>
                         <Descricao>Com preços que cabe no seu bolso e com uma velocidade incrível!</Descricao>
                         <BotaoContainer>
                             <Botao onClick={handleMandarMensagem}>Saiba mais</Botao>
@@ -55,7 +55,7 @@ const BotaoContainer = styled.div`
     z-index: 1;
     display: flex;
     flex-direction: column;
-    width: 20%;
+    width: 160px;
     margin-top: 2rem;
 
     @media (max-width: 768px) {
