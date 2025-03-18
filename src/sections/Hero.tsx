@@ -68,7 +68,10 @@ const Titulo = styled.h1`
     font-weight: 700;
     line-height: 1.0;
     text-align: left;
-
+    background: linear-gradient(to bottom, #FDCA03, #FA971C);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
     @media (max-width: 768px) {
         font-size: 2.5rem;
     }
