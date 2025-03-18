@@ -44,7 +44,6 @@ const ContentWrapper = styled.div`
     display: flex;
     flex-direction: row;
     width: 100%;
-    
     @media (max-width: 768px) {
         flex-direction: column-reverse;
     }
@@ -76,6 +75,7 @@ const TextContainer = styled.div`
         width: 100%;
         text-align: center;
         margin-top: 2rem;
+        order: 2;
     }
 `;
 
@@ -83,10 +83,11 @@ const ImageWrapper = styled.div`
     width: 50%;
     display: flex;
     justify-content: center;
-    
+    height: 100%;
     @media (max-width: 768px) {
-        width: 80%;
         margin: 0 auto;
+        padding-top: 2rem;
+        order: 1;
     }
 `;
 
@@ -94,7 +95,15 @@ const Imagem = styled.img`
     z-index: 0;
     
     @media (max-width: 768px) {
-        max-width: 450px;
+        max-width: 600px;
+    }
+
+    @media (max-width: 480px) {
+        max-width: 400px;
+    }
+
+    @media (max-width: 320px) {
+        max-width: 300px;
     }
 `;
 
@@ -161,8 +170,7 @@ const Section = styled.section`
     
     @media (max-width: 768px) {
         height: auto;
-        min-height: 100vh;
-        padding: 5vh 0;
+    
     }
 `;
 
